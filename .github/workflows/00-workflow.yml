@@ -1,0 +1,21 @@
+# 00-workflow.yml
+
+name: "00 workflow" # this is the name workflow
+
+# this is a event
+on: 
+  push:
+    branches: [main]
+
+#this is a jobs
+jobs:
+  this-is-a-job:
+    runs-on: ubuntu-latest # this is a runner
+    steps:
+        - name: "this is a step"
+          run: echo "this is a script"
+          
+        - name: "this is a other step"
+          uses: odonML/octo-say@v2 # action ejecution
+          with:
+            message: "hello, world bandamax" # param for action
